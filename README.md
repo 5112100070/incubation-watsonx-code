@@ -105,3 +105,36 @@ to : `$(target-url)$(request.path)$(request.search)`
 14. Click Sub Menu Test
 
 ![](https://github.com/5112100070/incubation-watsonx-code/blob/main/images/implement-api-on-apic/images-12.png)
+
+## Implementation API Connect using code generator
+
+We will create example implementation of allowing ip using gateway script
+
+1. Generate script using Plugin from VSCode with javascript extentions.
+example command: `create javascript code to check allowed ip. list of allowed ip with format 10.131.*.*`
+this command will generate code javascript which we can use
+
+![](https://github.com/5112100070/incubation-watsonx-code/blob/main/images/hands-on-2/images-1.png)
+
+2. Back to API Connect. Go to your defined api. select **Gateway -> Policies** to open logical modification. 
+
+3. Create policies with this sequence. 
+**Set Variable**:
+    - Action: set
+    - Set: client.isAllowed
+    - Type: Boolean
+
+**Gateway Script**:
+Paste result from Code Generator to here and add this line of code on below
+`context.set('client.isAllowed', checkAllowedIp(context.get('session.clientAddress')));`
+
+**Switch**:
+case 0: client.isAllowed
+implement otherwise disini
+
+create sequence like this picture:
+![](https://github.com/5112100070/incubation-watsonx-code/blob/main/images/hands-on-2/images-1.png)
+
+4. After success implement this case click Save
+
+5. Changes you can check with hit API using **Test** feature or hit using Postman
