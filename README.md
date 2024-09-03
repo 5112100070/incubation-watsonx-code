@@ -133,7 +133,7 @@ case 0: client.isAllowed
 implement otherwise disini
 
 create sequence like this picture:
-![](https://github.com/5112100070/incubation-watsonx-code/blob/main/images/hands-on-2/images-1.png)
+![](https://github.com/5112100070/incubation-watsonx-code/blob/main/images/hands-on-2/images-2.png)
 
 4. After success implement this case click Save
 
