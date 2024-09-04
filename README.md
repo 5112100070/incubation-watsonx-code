@@ -138,3 +138,11 @@ create sequence like this picture:
 4. After success implement this case click Save
 
 5. Changes you can check with hit API using **Test** feature or hit using Postman
+
+example account_no:
+8983798023
+1234567899
+1234567878
+1234567897
+1234567890
+2345678968
